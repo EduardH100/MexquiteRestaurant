@@ -1,3 +1,8 @@
+@extends('FrontWeb.TemaFront')
+@section('contenido')
+	<!-- Slide1 -->
+	@include('FrontWeb.SlideHome')
+
 	<section class="section-welcome bg1-pattern p-t-120 p-b-105">
 		<div class="container">
 			<div class="row">
@@ -31,3 +36,7 @@
 			</div>
 		</div>
 	</section>
+    @include('FrontWeb.Presentation')
+	@include('FrontWeb.FormReservationHome')
+	
+@endsection

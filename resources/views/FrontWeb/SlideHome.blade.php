@@ -1,7 +1,7 @@
 <section class="section-slide">
 		<div class="wrap-slick1">
 			<div class="slick1">
-				<div class="item-slick1 item1-slick1" style="background-image: url(images/slide1-01.jpg);">
+				<div class="item-slick1 item1-slick1" style="background-image: url(images/mex/fondo1.jpg);">
 					<div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
 						<span class="caption1-slide1 txt1 t-center animated visible-false m-b-15" data-appear="fadeInDown">
 							Bienvenido A
@@ -20,7 +20,7 @@
 					</div>
 				</div>
 
-				<div class="item-slick1 item2-slick1" style="background-image: url(images/master-slides-02.jpg);">
+				<div class="item-slick1 item2-slick1" style="background-image: url(images/mex/fondo2.jpg);">
 					<div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
 						<span class="caption1-slide1 txt1 t-center animated visible-false m-b-15" data-appear="rollIn">
 							Bienvenido A
@@ -38,26 +38,6 @@
 						</div>
 					</div>
 				</div>
-
-				<div class="item-slick1 item3-slick1" style="background-image: url(images/master-slides-01.jpg);">
-					<div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
-						<span class="caption1-slide1 txt1 t-center animated visible-false m-b-15" data-appear="rotateInDownLeft">
-							Bienvenido A
-						</span>
-
-						<h2 class="caption2-slide1 tit1 t-center animated visible-false m-b-37" data-appear="rotateInUpRight">
-							Mexquite Restaurant
-						</h2>
-
-						<div class="wrap-btn-slide1 animated visible-false" data-appear="rotateIn">
-							<!-- Button1 -->
-							<a href="menu.html" class="btn1 flex-c-m size1 txt3 trans-0-4">
-								Checa el Menú
-							</a>
-						</div>
-					</div>
-				</div>
-
 			</div>
 
 			<div class="wrap-slick1-dots"></div>

@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
-
+namespace App\Http\Controllers\Reservation;
+use App\Dish;
+use App\Http\Controllers\Controller;
 use App\Reservation;
 use Illuminate\Http\Request;
 
@@ -14,7 +15,7 @@ class ReservationController extends Controller
      */
     public function index()
     {
-        //
+        return view('FrontWeb.FormReservation');
     }
 
     /**
@@ -46,7 +47,10 @@ class ReservationController extends Controller
      */
     public function show(Reservation $reservation)
     {
-        //
+        $reservacion = Reservation::findorfail($reservation->id);
+        $platillos = $reservacion->dishes()->paginate(4);
+        $platillosList = Dish::all();
+        return view('Reservacion.showReservacion', compact('reservacion','platillos','platillosList'));
     }
 
     /**

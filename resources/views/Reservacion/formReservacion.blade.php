@@ -20,13 +20,13 @@
       @endif
       
       
-      <h3 class="tile-title">Rellene los Campos para Alumno</h3>
+      <h3 class="tile-title">Rellene los Campos para Reservación</h3>
       <div class="tile-body">
 
-        @if(isset($alumno))
-          {!! Form::model($alumno, ['route' => ['alumnos.update', $alumno->id], 'method' => 'PATCH']) !!}
+        @if(isset($reservacion))
+          {!! Form::model($reservación, ['route' => ['reservations.update', $reservacion->id], 'method' => 'PATCH']) !!}
         @else
-          {!! Form::open(['route' => 'alumnos.store']) !!}
+          {!! Form::open(['route' => 'reservations.store']) !!}
         @endif 
           {{-- csrf_field() --}}
           <div class="form-group">

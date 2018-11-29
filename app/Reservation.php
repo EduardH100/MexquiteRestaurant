@@ -12,14 +12,22 @@ class Reservation extends Model
 {
     use softDeletes;
 
+    const PROMOCION = 'promoción';
+    const CUPON = 'cupón';
+    const INVITACION = 'invitación';
+    const TARJETA = 'tarjeta';
+    const EFECTIVO = 'efectivo';
+    const PROMOCION_EFECTIVO = 'promoción + efectivo';
+    
     protected $fillable = [
     	'date',
     	'hour',
     	'clients_quantity',
     	'occasion',
+        'payment',
+        'details',
     	'client_id',
     	'table_id',
-    	'payment_id',
     ];
 
     public function client()
@@ -30,11 +38,6 @@ class Reservation extends Model
     public function table()
     {
         return $this->belongsTo(Table::class);
-    }
-
-    public function payment()
-    {
-        return $this->belongsTo(Payment::class);
     }
 
     public function dishes()

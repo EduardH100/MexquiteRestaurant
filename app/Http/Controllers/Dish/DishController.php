@@ -1,9 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Dish;
 
 use App\Dish;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class DishController extends Controller
 {
@@ -46,7 +47,8 @@ class DishController extends Controller
      */
     public function show(Dish $dish)
     {
-        //
+        $platillo = Dish::findorfail($dish->id);
+        return view('Platillo.showPlatillo', compact('platillo'));
     }
 
     /**

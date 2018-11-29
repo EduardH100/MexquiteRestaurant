@@ -1,3 +1,10 @@
+@extends('FrontWeb.TemaFront')
+@section('contenido')
+<section class="bg-title-page flex-c-m p-t-160 p-b-80 p-l-15 p-r-15" style="background-image: url(images/mex/interior3.jpg);">
+		<h2 class="tit6 t-center">
+			Reservacion
+		</h2>
+</section>
 	<section class="section-reservation bg1-pattern p-t-100 p-b-113">
 		<div class="container">
 			<div class="row">
@@ -145,3 +152,4 @@
 			</div>
 		</div>
 	</section>
+@endsection

@@ -5,7 +5,7 @@
 				<div class="wrap_header trans-0-3">
 					<!-- Logo -->
 					<div class="logo">
-						<a href="index.html">
+						<a href="{{ route('mexquiterestaurant') }}">
 							<img src="images/icons/taco2.jpg" alt="IMG-LOGO" data-logofixed="images/icons/taco2.jpg">
 						</a>
 					</div>
@@ -15,27 +15,27 @@
 						<nav class="menu">
 							<ul class="main_menu">
 								<li>
-									<a href="index.html">Casa</a>
+									<a href="{{ route('mexquiterestaurant') }}">Casa</a>
 								</li>
 
 								<li>
-									<a href="menu.html">Menu</a>
+									<a href="{{ route('menu') }}">Menu</a>
 								</li>
 
 								<li>
-									<a href="reservation.html">Reservacion</a>
+									<a href="{{ route('reservation') }}">Reservacion</a>
 								</li>
 
 								<li>
-									<a href="gallery.html">Galeria</a>
+									<a href="{{ route('gallery') }}">Galeria</a>
 								</li>
 
 								<li>
-									<a href="about.html">Sobre nosotros</a>
+									<a href="{{ route('aboutUs') }}">Sobre nosotros</a>
 								</li>
 
 								<li>
-									<a href="contact.html">Contacto</a>
+									<a href="{{ route('contact') }}">Contacto</a>
 								</li>
 							</ul>
 						</nav>

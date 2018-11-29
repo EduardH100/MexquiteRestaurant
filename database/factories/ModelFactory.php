@@ -5,7 +5,6 @@ use App\Client;
 use App\Dish;
 use App\Gallery;
 use App\Image;
-use App\Payment;
 use App\Reservation;
 use App\Table;
 use App\User;
@@ -29,7 +28,6 @@ Category::flushEventListeners();
 Dish::flushEventListeners();
 Gallery::flushEventListeners();
 Image::flushEventListeners();
-Payment::flushEventListeners();
 Reservation::flushEventListeners();
 Table::flushEventListeners();
 
@@ -77,13 +75,6 @@ $factory->define(Image::class, function(Faker $faker){
   ];
 });
 
-$factory->define(Payment::class, function(Faker $faker){
-  return [
-    'name' => $faker->randomElement(['Efectivo', 'Cupón', 'Invitación', 'Tarjeta']),
-    'details' => $faker->text($maxNoChars = 100),
-  ];
-});
-
 $factory->define(Dish::class, function(Faker $faker){
   return [
     'name' => $faker->word,
@@ -102,10 +93,12 @@ $factory->define(Reservation::class, function(Faker $faker){
     'date' => $date->addDays(rand(1, 3))->format('Y-m-d'),
     'hour' => Carbon::createFromTime($hour, 0),
     'clients_quantity' => $faker->numberBetween($min = 1, $max = 3),
+    'payment' => $faker->randomElement([Reservation::PROMOCION_EFECTIVO, Reservation::CUPON,
+      Reservation::EFECTIVO, Reservation::TARJETA, Reservation::INVITACION, Reservation::PROMOCION]),
+    'details' => $faker->text($maxNoChars = 50),
     'occasion' => $faker->text($maxNoChars = 30),
     'client_id' => App\Client::all()->random()->id,
     'table_id' => Table::all()->random()->id,  
-    'payment_id' => Payment::all()->unique()->random()->id,
   ];
 });
 

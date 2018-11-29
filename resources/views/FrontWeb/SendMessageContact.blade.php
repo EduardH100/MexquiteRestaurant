@@ -1,11 +1,4 @@
 <section class="section-contact bg1-pattern p-t-90 p-b-113">
-		<!-- Map -->
-		<div class="container">
-			<div class="map bo8 bo-rad-10 of-hidden">
-				<div class="contact-map size37" id="google_map" data-map-x="40.704644" data-map-y="-74.011987" data-pin="images/icons/icon-position-map.png" data-scrollwhell="0" data-draggable="1"></div>
-			</div>
-		</div>
-
 		<div class="container">
 			<h3 class="tit7 t-center p-b-62 p-t-105">
 				Envianos un mensaje

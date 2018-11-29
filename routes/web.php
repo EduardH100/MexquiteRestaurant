@@ -16,6 +16,19 @@ Route::get('/admin', function () {
 })->name('panel');
 
 Route::get('/', 'FrontWeb\HomeController@index')->name('mexquiterestaurant');
+Route::get('/menu', 'FrontWeb\MenuController@index')->name('menu');
+Route::get('/reservation', 'FrontWeb\ReservationController@index')->name('reservation');
+Route::get('/gallery', 'FrontWeb\GalleryController@index')->name('gallery');
+
+Route::get('/aboutUs', function(){
+  return view('FrontWeb\AboutUs');
+})->name('aboutUs');
+
+Route::get('/contact', function(){
+  
+  return view('FrontWeb\Contact');
+})->name('contact');
+
 
 Auth::routes();
 
@@ -26,12 +39,14 @@ Route::group(['prefix' => 'admin'], function(){
 	
 	Route::resource('clients', 'Client\ClientController');
 	Route::resource('clients.reservations', 'Client\ClientReservationController');
-	
+
 	Route::resource('dishes', 'Dish\DishController');
 	Route::resource('galleries', 'Gallery\GalleryController');
 	Route::resource('images', 'Image\ImageController');
-	Route::resource('payments', 'Payment\PaymentController');
+	
 	Route::resource('reservations', 'Reservation\ReservationController');
+	Route::resource('reservations.dishes', 'Reservation\ReservationDishController');
+
 	Route::resource('tables', 'Table\TableController');
 	Route::resource('users', 'User\UserController');
 });

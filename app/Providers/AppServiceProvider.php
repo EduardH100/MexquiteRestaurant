@@ -2,6 +2,10 @@
 
 namespace App\Providers;
 
+use App\Client;
+use App\Mail\ClientCreated;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -13,7 +17,14 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        Schema::defaultStringLength(191);
+
+        Client::created(function($client) {
+            retry(5, function() use ($client) {
+                Mail::to($client)->send(new ClientCreated($client));    
+            }, 100);
+        });
+
     }
 
     /**

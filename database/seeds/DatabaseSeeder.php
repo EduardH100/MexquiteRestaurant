@@ -5,7 +5,6 @@ use App\Client;
 use App\Dish;
 use App\Gallery;
 use App\Image;
-use App\Payment;
 use App\Reservation;
 use App\Table;
 use App\User;
@@ -30,7 +29,6 @@ class DatabaseSeeder extends Seeder
         Dish::truncate();
         Gallery::truncate();
         Image::truncate();
-        Payment::truncate();
         Table::truncate();
         Reservation::truncate();
        	User::truncate();
@@ -54,7 +52,6 @@ class DatabaseSeeder extends Seeder
         factory(Client::class, $cantidadClientes)->create();
         factory(Table::class, $cantidadMesas)->create();
         factory(Image::class, $cantidadImagenes)->create();
-        factory(Payment::class, $cantidadPagos)->create();
         factory(Gallery::class, $cantidadGalerias)->create();
         factory(Dish::class, $cantidadComidas)->create();
         factory(Reservation::class, $cantidadReservaciones)->create();

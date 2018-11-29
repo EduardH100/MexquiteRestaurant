@@ -51,13 +51,13 @@
               <th>ID</th>
               <th>FECHA</th>
               <th>HORA</th>
-              <th>PERSONAS</th>
+              <th>QTY</th>
               <th>OCASIÓN</th>
               <th>MESA</th>
               <th>PAGO POR</th>
               <th>TOTAL</th>
+              <th>DETALLE</th>
               <th>PEDIDO</th>
-              <th>ACTUALIZACIÓN</th>
               <th>ACCIONES</th>
             </tr>
           </thead>
@@ -71,10 +71,10 @@
               <td> {{ $reservacion->clients_quantity }} </td>
               <td> {{ $reservacion->occasion }}</td>
               <td> {{ $reservacion->table->number }}</td>
-              <td> {{ $reservacion->payment->name }}</td>
+              <td> {{ $reservacion->payment }}</td>
               <td> {{ '$' }} </td>
+              <td> {{ $reservacion->details }}</td>
               <td> {{ $reservacion->created_at }}</td>
-              <td> {{ $reservacion->updated_at }}</td>
               <td> {!! Form::submit('Eliminar', ['class' => 'btn btn-sm btn-danger']) !!} </td>
             </tr>
             {!! Form::close() !!}
